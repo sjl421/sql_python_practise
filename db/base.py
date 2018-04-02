@@ -36,7 +36,7 @@ def executemany_insert(conn, sql, params):
         return e.msg
 
 
-def execute_select(conn, sql):
+def execute_select_all(conn, sql):
     cursor = conn.cursor()
     cursor.execute(sql)
     data = cursor.fetchall()

@@ -1,4 +1,4 @@
-from .base import execute_create_or_drop, execute_insert, executemany_insert
+from .base import *
 
 
 CREATE_TABLE_CITY = '''
@@ -24,6 +24,10 @@ SELECT_FROM_CITY = '''
 SELECT * FROM city;
 '''
 
+SELECT_FROM_CITY_WHERE_NAME = '''
+SELECT * FROM city WHERE name='{}';
+'''
+
 
 def create_table_city(conn):
     execute_create_or_drop(conn, CREATE_TABLE_CITY)
@@ -31,6 +35,14 @@ def create_table_city(conn):
 
 def drop_table_city(conn):
     execute_create_or_drop(conn, DROP_TABLE_CITY)
+
+
+def select_from_city(conn, city):
+    return execute_select_all(conn, SELECT_FROM_CITY_WHERE_NAME.format(city))
+
+
+def select_all_from_city(conn):
+    return execute_select_all(conn, SELECT_FROM_CITY)
 
 
 def insert_into_city(conn, param):

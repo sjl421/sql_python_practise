@@ -1,14 +1,17 @@
 import os
 import json
 from .base import BaseHandler
-from db.base import execute_select
-from db.city import insert_many_into_city
+from db.city import insert_many_into_city, select_from_city, select_all_from_city
 
 
 class CityHandler(BaseHandler):
 
     def get(self, *args, **kwargs):
-        data = execute_select(conn=self.conn, sql=SELECT_FROM_CITY)
+        name = self.get_argument('name', None)
+        if name:
+            data = select_from_city(conn=self.conn, city=name)
+        else:
+            data = select_all_from_city(conn=self.conn)
         self.write('get {}'.format(data))
 
     def post(self, *args, **kwargs):

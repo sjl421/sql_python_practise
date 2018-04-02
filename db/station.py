@@ -1,4 +1,4 @@
-from .base import execute_create_or_drop
+from .base import *
 
 
 CREATE_TABLE_STATION = '''
@@ -16,6 +16,24 @@ DROP_TABLE_STATION = '''
 DROP TABLE station;
 '''
 
+INSERT_INTO_TABLE_STATION = '''
+INSERT INTO station (
+  station_name,
+  station_code,
+  city_id
+) VALUES (
+  %s, %s, %s
+);
+'''
+
+SELECT_FROM_STATION = '''
+SELECT * FROM station;
+'''
+
+SELECT_FROM_STATION_WHERE_NAME = '''
+SELECT * FROM station WHERE station_name='{}';
+'''
+
 
 def create_table_station(conn):
     execute_create_or_drop(conn, CREATE_TABLE_STATION)
@@ -23,3 +41,19 @@ def create_table_station(conn):
 
 def drop_table_station(conn):
     execute_create_or_drop(conn, DROP_TABLE_STATION)
+
+
+def select_from_station(conn, station):
+    return execute_select_all(conn, SELECT_FROM_STATION_WHERE_NAME.format(station))
+
+
+def select_all_from_station(conn):
+    return execute_select_all(conn, SELECT_FROM_STATION)
+
+
+def insert_into_station(conn, param):
+    execute_insert(conn, INSERT_INTO_TABLE_STATION)
+
+
+def insert_many_into_station(conn, params):
+    return executemany_insert(conn, INSERT_INTO_TABLE_STATION, params)
