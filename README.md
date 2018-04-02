@@ -22,6 +22,8 @@
 
 - web.py Web Service 入口
 
+- config.py 配置文件，包含数据库配置信息
+
 ## 表
 
 - city
