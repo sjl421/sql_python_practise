@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fd743200-9606-44f0-8dc2-21c7bdcee527" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
       <change beforePath="$PROJECT_DIR$/db/aqi.py" afterPath="$PROJECT_DIR$/db/aqi.py" />
       <change beforePath="$PROJECT_DIR$/db/base.py" afterPath="$PROJECT_DIR$/db/base.py" />
+      <change beforePath="$PROJECT_DIR$/db/station.py" afterPath="$PROJECT_DIR$/db/station.py" />
       <change beforePath="$PROJECT_DIR$/handler/aqi.py" afterPath="$PROJECT_DIR$/handler/aqi.py" />
       <change beforePath="$PROJECT_DIR$/web.py" afterPath="$PROJECT_DIR$/web.py" />
     </list>
@@ -17,17 +17,67 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/sql_python_practise$web.coverage" NAME="web Coverage Results" MODIFIED="1522762689875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sql_python_practise$web.coverage" NAME="web Coverage Results" MODIFIED="1522765114665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="aqi.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="city.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/city.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="station_names.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/station_names.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="0" column="86392" lean-forward="false" selection-start-line="0" selection-start-column="86387" selection-end-line="0" selection-end-column="86392" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aqi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/handler/aqi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+            <state relative-caret-position="84">
+              <caret line="68" column="46" lean-forward="true" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all_cities.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/all_cities.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="0" column="4699" lean-forward="false" selection-start-line="0" selection-start-column="4686" selection-end-line="0" selection-end-column="4699" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="station.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/station.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="11" column="47" lean-forward="false" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+              <folding>
+                <marker date="1522764921045" expanded="true" signature="49:404" ph="CREATE TABLE... IF" />
+                <marker date="1522764921045" expanded="true" signature="436:454" ph="DROP TABLE s... " />
+                <marker date="1522764921045" expanded="true" signature="493:615" ph="INSERT INTO station... " />
+                <marker date="1522764921045" expanded="true" signature="579:612" ph="SELECT id fr... city" />
+                <marker date="1522764921045" expanded="true" signature="648:669" ph="SELECT * FRO... station" />
+                <marker date="1522764921045" expanded="true" signature="713:758" ph="SELECT * FRO... station" />
+                <marker date="1522764921045" expanded="true" signature="802:847" ph="SELECT * FRO... station" />
+                <marker date="1522764921045" expanded="true" signature="891:964" ph="SELECT * FRO... station" />
+                <marker date="1522764921045" expanded="true" signature="928:963" ph="SELECT id FR... city" />
               </folding>
             </state>
           </provider>
@@ -36,8 +86,8 @@
       <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1176">
-              <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+            <state relative-caret-position="261">
+              <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -48,19 +98,32 @@
       <file leaf-file-name="aqi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/aqi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+            <state relative-caret-position="119">
+              <caret line="108" column="8" lean-forward="true" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="8" />
               <folding>
-                <marker date="1522762674875" expanded="true" signature="50:688" ph="CREATE TABLE... IF" />
-                <marker date="1522762674875" expanded="true" signature="726:1352" ph="CREATE TABLE... IF" />
-                <marker date="1522762674875" expanded="true" signature="1385:1400" ph="DROP TABLE c... " />
-                <marker date="1522762674875" expanded="true" signature="1385:1404" ph="DROP TABLE c... " />
-                <marker date="1522762674875" expanded="true" signature="1440:1462" ph="DROP TABLE c... " />
-                <marker date="1522762674875" expanded="true" signature="1502:1859" ph="INSERT INTO city_aqi... " />
-                <marker date="1522762674875" expanded="true" signature="1747:1780" ph="SELECT id fr... city" />
-                <marker date="1522762674875" expanded="true" signature="1902:2322" ph="INSERT INTO city_aqi... " />
-                <marker date="1522762674875" expanded="true" signature="2165:2198" ph="SELECT id fr... city" />
-                <marker date="1522762674875" expanded="true" signature="2251:2295" ph="SELECT id fr... station" />
+                <marker date="1522764728250" expanded="true" signature="50:688" ph="CREATE TABLE... IF" />
+                <marker date="1522764728250" expanded="true" signature="726:1360" ph="CREATE TABLE... IF" />
+                <marker date="1522764728250" expanded="true" signature="1393:1408" ph="DROP TABLE c... " />
+                <marker date="1522764728250" expanded="true" signature="1393:1412" ph="DROP TABLE c... " />
+                <marker date="1522764728250" expanded="true" signature="1448:1470" ph="DROP TABLE c... " />
+                <marker date="1522764728250" expanded="true" signature="1510:1867" ph="INSERT INTO city_aqi... " />
+                <marker date="1522764728250" expanded="true" signature="1755:1788" ph="SELECT id fr... city" />
+                <marker date="1522764728250" expanded="true" signature="1910:2340" ph="INSERT INTO city_aqi... " />
+                <marker date="1522764728250" expanded="true" signature="2164:2197" ph="SELECT id fr... city" />
+                <marker date="1522764728250" expanded="true" signature="2253:2297" ph="SELECT id fr... station" />
+                <marker date="1522764728250" expanded="true" signature="2253:2317" ph="SELECT id fr... station" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,6 +138,15 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>quality&quot;:&quot;</find>
+      <find>&quot;,&quot;quality&quot;:&quot;</find>
+      <find>2632A</find>
+      <find>2633A</find>
+      <find>2622A</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -86,13 +158,15 @@
         <option value="$PROJECT_DIR$/handler/city.py" />
         <option value="$PROJECT_DIR$/db/city.py" />
         <option value="$PROJECT_DIR$/handler/station.py" />
-        <option value="$PROJECT_DIR$/db/station.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/web.py" />
-        <option value="$PROJECT_DIR$/db/base.py" />
-        <option value="$PROJECT_DIR$/db/aqi.py" />
         <option value="$PROJECT_DIR$/handler/aqi.py" />
+        <option value="$PROJECT_DIR$/db/base.py" />
+        <option value="$PROJECT_DIR$/data/all_cities.json" />
+        <option value="$PROJECT_DIR$/db/aqi.py" />
+        <option value="$PROJECT_DIR$/db/station.py" />
+        <option value="$PROJECT_DIR$/data/station_names.json" />
       </list>
     </option>
   </component>
@@ -281,15 +355,15 @@
         <state relative-caret-position="1148">
           <caret line="41" column="74" lean-forward="false" selection-start-line="41" selection-start-column="74" selection-end-line="41" selection-end-column="74" />
           <folding>
-            <marker date="1522744327911" expanded="true" signature="49:354" ph="CREATE TABLE... IF" />
-            <marker date="1522744327911" expanded="true" signature="386:404" ph="DROP TABLE s... " />
-            <marker date="1522744327911" expanded="true" signature="443:565" ph="INSERT INTO station... " />
-            <marker date="1522744327911" expanded="true" signature="529:562" ph="SELECT id fr... city" />
-            <marker date="1522744327911" expanded="true" signature="598:619" ph="SELECT * FRO... station" />
-            <marker date="1522744327911" expanded="true" signature="663:708" ph="SELECT * FRO... station" />
-            <marker date="1522744327911" expanded="true" signature="752:797" ph="SELECT * FRO... station" />
-            <marker date="1522744327911" expanded="true" signature="841:914" ph="SELECT * FRO... station" />
-            <marker date="1522744327911" expanded="true" signature="878:913" ph="SELECT id FR... city" />
+            <marker date="1522764921045" expanded="true" signature="49:404" ph="CREATE TABLE... IF" />
+            <marker date="1522764921045" expanded="true" signature="436:454" ph="DROP TABLE s... " />
+            <marker date="1522764921045" expanded="true" signature="493:615" ph="INSERT INTO station... " />
+            <marker date="1522764921045" expanded="true" signature="579:612" ph="SELECT id fr... city" />
+            <marker date="1522764921045" expanded="true" signature="648:669" ph="SELECT * FRO... station" />
+            <marker date="1522764921045" expanded="true" signature="713:758" ph="SELECT * FRO... station" />
+            <marker date="1522764921045" expanded="true" signature="802:847" ph="SELECT * FRO... station" />
+            <marker date="1522764921045" expanded="true" signature="891:964" ph="SELECT * FRO... station" />
+            <marker date="1522764921045" expanded="true" signature="928:963" ph="SELECT id FR... city" />
           </folding>
         </state>
       </provider>
@@ -320,7 +394,7 @@
         <state relative-caret-position="840">
           <caret line="33" column="53" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="33" selection-end-column="53" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -330,16 +404,17 @@
         <state relative-caret-position="728">
           <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
           <folding>
-            <marker date="1522762674875" expanded="true" signature="50:688" ph="CREATE TABLE... IF" />
-            <marker date="1522762674875" expanded="true" signature="726:1352" ph="CREATE TABLE... IF" />
-            <marker date="1522762674875" expanded="true" signature="1385:1400" ph="DROP TABLE c... " />
-            <marker date="1522762674875" expanded="true" signature="1385:1404" ph="DROP TABLE c... " />
-            <marker date="1522762674875" expanded="true" signature="1440:1462" ph="DROP TABLE c... " />
-            <marker date="1522762674875" expanded="true" signature="1502:1859" ph="INSERT INTO city_aqi... " />
-            <marker date="1522762674875" expanded="true" signature="1747:1780" ph="SELECT id fr... city" />
-            <marker date="1522762674875" expanded="true" signature="1902:2322" ph="INSERT INTO city_aqi... " />
-            <marker date="1522762674875" expanded="true" signature="2165:2198" ph="SELECT id fr... city" />
-            <marker date="1522762674875" expanded="true" signature="2251:2295" ph="SELECT id fr... station" />
+            <marker date="1522764728250" expanded="true" signature="50:688" ph="CREATE TABLE... IF" />
+            <marker date="1522764728250" expanded="true" signature="726:1360" ph="CREATE TABLE... IF" />
+            <marker date="1522764728250" expanded="true" signature="1393:1408" ph="DROP TABLE c... " />
+            <marker date="1522764728250" expanded="true" signature="1393:1412" ph="DROP TABLE c... " />
+            <marker date="1522764728250" expanded="true" signature="1448:1470" ph="DROP TABLE c... " />
+            <marker date="1522764728250" expanded="true" signature="1510:1867" ph="INSERT INTO city_aqi... " />
+            <marker date="1522764728250" expanded="true" signature="1755:1788" ph="SELECT id fr... city" />
+            <marker date="1522764728250" expanded="true" signature="1910:2340" ph="INSERT INTO city_aqi... " />
+            <marker date="1522764728250" expanded="true" signature="2164:2197" ph="SELECT id fr... city" />
+            <marker date="1522764728250" expanded="true" signature="2253:2297" ph="SELECT id fr... station" />
+            <marker date="1522764728250" expanded="true" signature="2253:2317" ph="SELECT id fr... station" />
           </folding>
         </state>
       </provider>
@@ -387,15 +462,15 @@
         <state relative-caret-position="1148">
           <caret line="41" column="74" lean-forward="false" selection-start-line="41" selection-start-column="74" selection-end-line="41" selection-end-column="74" />
           <folding>
-            <marker date="1522744327911" expanded="true" signature="49:354" ph="CREATE TABLE... IF" />
-            <marker date="1522744327911" expanded="true" signature="386:404" ph="DROP TABLE s... " />
-            <marker date="1522744327911" expanded="true" signature="443:565" ph="INSERT INTO station... " />
-            <marker date="1522744327911" expanded="true" signature="529:562" ph="SELECT id fr... city" />
-            <marker date="1522744327911" expanded="true" signature="598:619" ph="SELECT * FRO... station" />
-            <marker date="1522744327911" expanded="true" signature="663:708" ph="SELECT * FRO... station" />
-            <marker date="1522744327911" expanded="true" signature="752:797" ph="SELECT * FRO... station" />
-            <marker date="1522744327911" expanded="true" signature="841:914" ph="SELECT * FRO... station" />
-            <marker date="1522744327911" expanded="true" signature="878:913" ph="SELECT id FR... city" />
+            <marker date="1522764921045" expanded="true" signature="49:404" ph="CREATE TABLE... IF" />
+            <marker date="1522764921045" expanded="true" signature="436:454" ph="DROP TABLE s... " />
+            <marker date="1522764921045" expanded="true" signature="493:615" ph="INSERT INTO station... " />
+            <marker date="1522764921045" expanded="true" signature="579:612" ph="SELECT id fr... city" />
+            <marker date="1522764921045" expanded="true" signature="648:669" ph="SELECT * FRO... station" />
+            <marker date="1522764921045" expanded="true" signature="713:758" ph="SELECT * FRO... station" />
+            <marker date="1522764921045" expanded="true" signature="802:847" ph="SELECT * FRO... station" />
+            <marker date="1522764921045" expanded="true" signature="891:964" ph="SELECT * FRO... station" />
+            <marker date="1522764921045" expanded="true" signature="928:963" ph="SELECT id FR... city" />
           </folding>
         </state>
       </provider>
@@ -415,7 +490,7 @@
         <state relative-caret-position="924">
           <caret line="33" column="53" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="33" selection-end-column="53" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -456,16 +531,17 @@
         <state relative-caret-position="728">
           <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
           <folding>
-            <marker date="1522762674875" expanded="true" signature="50:688" ph="CREATE TABLE... IF" />
-            <marker date="1522762674875" expanded="true" signature="726:1352" ph="CREATE TABLE... IF" />
-            <marker date="1522762674875" expanded="true" signature="1385:1400" ph="DROP TABLE c... " />
-            <marker date="1522762674875" expanded="true" signature="1385:1404" ph="DROP TABLE c... " />
-            <marker date="1522762674875" expanded="true" signature="1440:1462" ph="DROP TABLE c... " />
-            <marker date="1522762674875" expanded="true" signature="1502:1859" ph="INSERT INTO city_aqi... " />
-            <marker date="1522762674875" expanded="true" signature="1747:1780" ph="SELECT id fr... city" />
-            <marker date="1522762674875" expanded="true" signature="1902:2322" ph="INSERT INTO city_aqi... " />
-            <marker date="1522762674875" expanded="true" signature="2165:2198" ph="SELECT id fr... city" />
-            <marker date="1522762674875" expanded="true" signature="2251:2295" ph="SELECT id fr... station" />
+            <marker date="1522764728250" expanded="true" signature="50:688" ph="CREATE TABLE... IF" />
+            <marker date="1522764728250" expanded="true" signature="726:1360" ph="CREATE TABLE... IF" />
+            <marker date="1522764728250" expanded="true" signature="1393:1408" ph="DROP TABLE c... " />
+            <marker date="1522764728250" expanded="true" signature="1393:1412" ph="DROP TABLE c... " />
+            <marker date="1522764728250" expanded="true" signature="1448:1470" ph="DROP TABLE c... " />
+            <marker date="1522764728250" expanded="true" signature="1510:1867" ph="INSERT INTO city_aqi... " />
+            <marker date="1522764728250" expanded="true" signature="1755:1788" ph="SELECT id fr... city" />
+            <marker date="1522764728250" expanded="true" signature="1910:2340" ph="INSERT INTO city_aqi... " />
+            <marker date="1522764728250" expanded="true" signature="2164:2197" ph="SELECT id fr... city" />
+            <marker date="1522764728250" expanded="true" signature="2253:2297" ph="SELECT id fr... station" />
+            <marker date="1522764728250" expanded="true" signature="2253:2317" ph="SELECT id fr... station" />
           </folding>
         </state>
       </provider>
@@ -493,15 +569,15 @@
         <state relative-caret-position="1035">
           <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
-            <marker date="1522744327911" expanded="true" signature="49:354" ph="CREATE TABLE... IF" />
-            <marker date="1522744327911" expanded="true" signature="386:404" ph="DROP TABLE s... " />
-            <marker date="1522744327911" expanded="true" signature="443:565" ph="INSERT INTO station... " />
-            <marker date="1522744327911" expanded="true" signature="529:562" ph="SELECT id fr... city" />
-            <marker date="1522744327911" expanded="true" signature="598:619" ph="SELECT * FRO... station" />
-            <marker date="1522744327911" expanded="true" signature="663:708" ph="SELECT * FRO... station" />
-            <marker date="1522744327911" expanded="true" signature="752:797" ph="SELECT * FRO... station" />
-            <marker date="1522744327911" expanded="true" signature="841:914" ph="SELECT * FRO... station" />
-            <marker date="1522744327911" expanded="true" signature="878:913" ph="SELECT id FR... city" />
+            <marker date="1522764921045" expanded="true" signature="49:404" ph="CREATE TABLE... IF" />
+            <marker date="1522764921045" expanded="true" signature="436:454" ph="DROP TABLE s... " />
+            <marker date="1522764921045" expanded="true" signature="493:615" ph="INSERT INTO station... " />
+            <marker date="1522764921045" expanded="true" signature="579:612" ph="SELECT id fr... city" />
+            <marker date="1522764921045" expanded="true" signature="648:669" ph="SELECT * FRO... station" />
+            <marker date="1522764921045" expanded="true" signature="713:758" ph="SELECT * FRO... station" />
+            <marker date="1522764921045" expanded="true" signature="802:847" ph="SELECT * FRO... station" />
+            <marker date="1522764921045" expanded="true" signature="891:964" ph="SELECT * FRO... station" />
+            <marker date="1522764921045" expanded="true" signature="928:963" ph="SELECT id FR... city" />
           </folding>
         </state>
       </provider>
@@ -510,6 +586,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="46" lean-forward="false" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -528,7 +605,7 @@
         <state relative-caret-position="391">
           <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -556,13 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/station_names.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="46" lean-forward="false" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -574,35 +644,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/all_cities.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/city.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="52" column="67" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="52" selection-end-column="67" />
           <folding />
         </state>
       </provider>
@@ -612,25 +657,7 @@
         <state relative-caret-position="504">
           <caret line="33" column="53" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="33" selection-end-column="53" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/station.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="20" column="6" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="26" selection-end-column="3" />
-          <folding>
-            <marker date="1522744327911" expanded="true" signature="49:354" ph="CREATE TABLE... IF" />
-            <marker date="1522744327911" expanded="true" signature="386:404" ph="DROP TABLE s... " />
-            <marker date="1522744327911" expanded="true" signature="443:565" ph="INSERT INTO station... " />
-            <marker date="1522744327911" expanded="true" signature="529:562" ph="SELECT id fr... city" />
-            <marker date="1522744327911" expanded="true" signature="598:619" ph="SELECT * FRO... station" />
-            <marker date="1522744327911" expanded="true" signature="663:708" ph="SELECT * FRO... station" />
-            <marker date="1522744327911" expanded="true" signature="752:797" ph="SELECT * FRO... station" />
-            <marker date="1522744327911" expanded="true" signature="841:914" ph="SELECT * FRO... station" />
-            <marker date="1522744327911" expanded="true" signature="878:913" ph="SELECT id FR... city" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -651,42 +678,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/base.py">
+    <entry file="file://$PROJECT_DIR$/web.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1176">
-          <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+        <state relative-caret-position="560">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/aqi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+        <state relative-caret-position="119">
+          <caret line="108" column="8" lean-forward="true" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="8" />
           <folding>
-            <marker date="1522762674875" expanded="true" signature="50:688" ph="CREATE TABLE... IF" />
-            <marker date="1522762674875" expanded="true" signature="726:1352" ph="CREATE TABLE... IF" />
-            <marker date="1522762674875" expanded="true" signature="1385:1400" ph="DROP TABLE c... " />
-            <marker date="1522762674875" expanded="true" signature="1385:1404" ph="DROP TABLE c... " />
-            <marker date="1522762674875" expanded="true" signature="1440:1462" ph="DROP TABLE c... " />
-            <marker date="1522762674875" expanded="true" signature="1502:1859" ph="INSERT INTO city_aqi... " />
-            <marker date="1522762674875" expanded="true" signature="1747:1780" ph="SELECT id fr... city" />
-            <marker date="1522762674875" expanded="true" signature="1902:2322" ph="INSERT INTO city_aqi... " />
-            <marker date="1522762674875" expanded="true" signature="2165:2198" ph="SELECT id fr... city" />
-            <marker date="1522762674875" expanded="true" signature="2251:2295" ph="SELECT id fr... station" />
+            <marker date="1522764728250" expanded="true" signature="50:688" ph="CREATE TABLE... IF" />
+            <marker date="1522764728250" expanded="true" signature="726:1360" ph="CREATE TABLE... IF" />
+            <marker date="1522764728250" expanded="true" signature="1393:1408" ph="DROP TABLE c... " />
+            <marker date="1522764728250" expanded="true" signature="1393:1412" ph="DROP TABLE c... " />
+            <marker date="1522764728250" expanded="true" signature="1448:1470" ph="DROP TABLE c... " />
+            <marker date="1522764728250" expanded="true" signature="1510:1867" ph="INSERT INTO city_aqi... " />
+            <marker date="1522764728250" expanded="true" signature="1755:1788" ph="SELECT id fr... city" />
+            <marker date="1522764728250" expanded="true" signature="1910:2340" ph="INSERT INTO city_aqi... " />
+            <marker date="1522764728250" expanded="true" signature="2164:2197" ph="SELECT id fr... city" />
+            <marker date="1522764728250" expanded="true" signature="2253:2297" ph="SELECT id fr... station" />
+            <marker date="1522764728250" expanded="true" signature="2253:2317" ph="SELECT id fr... station" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/all_cities.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="0" column="4699" lean-forward="false" selection-start-line="0" selection-start-column="4686" selection-end-line="0" selection-end-column="4699" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/handler/aqi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        <state relative-caret-position="84">
+          <caret line="68" column="46" lean-forward="true" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/station.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="11" column="47" lean-forward="false" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+          <folding>
+            <marker date="1522764921045" expanded="true" signature="49:404" ph="CREATE TABLE... IF" />
+            <marker date="1522764921045" expanded="true" signature="436:454" ph="DROP TABLE s... " />
+            <marker date="1522764921045" expanded="true" signature="493:615" ph="INSERT INTO station... " />
+            <marker date="1522764921045" expanded="true" signature="579:612" ph="SELECT id fr... city" />
+            <marker date="1522764921045" expanded="true" signature="648:669" ph="SELECT * FRO... station" />
+            <marker date="1522764921045" expanded="true" signature="713:758" ph="SELECT * FRO... station" />
+            <marker date="1522764921045" expanded="true" signature="802:847" ph="SELECT * FRO... station" />
+            <marker date="1522764921045" expanded="true" signature="891:964" ph="SELECT * FRO... station" />
+            <marker date="1522764921045" expanded="true" signature="928:963" ph="SELECT id FR... city" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/city.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/station_names.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="0" column="86392" lean-forward="false" selection-start-line="0" selection-start-column="86387" selection-end-line="0" selection-end-column="86392" />
+          <folding />
         </state>
       </provider>
     </entry>

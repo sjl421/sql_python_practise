@@ -28,8 +28,6 @@ def execute_insert(conn, sql, param):
 def executemany_insert(conn, sql, params):
     try:
         cursor = conn.cursor()
-        print(sql)
-        print(params)
         cursor.executemany(sql, params)
         conn.commit()
         cursor.close()

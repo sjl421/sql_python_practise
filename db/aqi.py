@@ -47,11 +47,11 @@ CREATE TABLE IF NOT EXISTS station_aqi (
   pm2_5_24h INT not NULL,
   position_id INT not NULL,
   primary_pollutant VARCHAR(100),
-  quality VARCHAR(10) not NULL,
-  level VARCHAR(10) not NULL,
+  quality VARCHAR(10),
   so2 INT not NULL,
   so2_24h INT not NULL,
-  time_point DATETIME not NULL
+  time_point DATETIME not NULL,
+  CONSTRAINT UNIQUE (position_id, time_point)
 ) DEFAULT CHARACTER SET utf8mb4;
 '''
 
@@ -111,14 +111,13 @@ INSERT INTO station_aqi (
   position_id,
   primary_pollutant,
   quality,
-  level,
   so2,
   so2_24h,
   time_point
 ) VALUES (
   %s, (SELECT id from city WHERE name=%s),
-  %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, 
-  %s, (SELECT id from station WHERE station_name=%s), %s, %s, %s, %s, %s, %s
+  %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
+  %s, (SELECT id from station WHERE station_name=%s AND station_code=%s), %s, %s, %s, %s, %s
 );
 '''
 
@@ -137,3 +136,15 @@ def insert_into_city_aqi(conn, param):
 
 def insert_many_into_city_aqi(conn, params):
     return executemany_insert(conn, INSERT_INTO_TABLE_CITY_AQI, params)
+
+
+def create_table_station_aqi(conn):
+    execute_create_or_drop(conn, CREATE_TABLE_STATION_AQI)
+
+
+def drop_table_station_aqi(conn):
+    execute_create_or_drop(conn, DROP_TABLE_STATION_AQI)
+
+
+def insert_many_into_station_aqi(conn, params):
+    return executemany_insert(conn, INSERT_INTO_TABLE_STATION_AQI, params)

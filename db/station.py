@@ -8,7 +8,8 @@ CREATE TABLE IF NOT EXISTS station (
   station_code VARCHAR(10) UNIQUE not NULL,
   city_id INT not NULL,
   KEY city_id (city_id),
-  CONSTRAINT station_ibfk_1 FOREIGN KEY (city_id) REFERENCES city(id)
+  CONSTRAINT station_ibfk_1 FOREIGN KEY (city_id) REFERENCES city(id),
+  CONSTRAINT UNIQUE (station_name, station_code)
 ) DEFAULT CHARACTER SET utf8mb4;
 '''
 

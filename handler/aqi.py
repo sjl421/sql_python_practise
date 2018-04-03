@@ -44,4 +44,38 @@ class AqiHandler(BaseHandler):
                     self.write('post {}'.format(cities))
                 else:
                     self.write('err: {}'.format(message))
-        self.write(aqi_for)
+        elif aqi_for == 'station':
+            with open(os.path.join(os.path.dirname(__file__), '../data/all_cities.json')) as fh:
+                cities = json.loads(fh.read())
+                message = insert_many_into_station_aqi(
+                    conn=self.conn,
+                    params=list(map(lambda x: (
+                        x['aqi'],
+                        x['area'],
+                        x['co'],
+                        x['co_24h'],
+                        x['no2'],
+                        x['no2_24h'],
+                        x['o3'],
+                        x['o3_24h'],
+                        x['o3_8h'],
+                        x['o3_8h_24h'],
+                        x['pm10'],
+                        x['pm10_24h'],
+                        x['pm2_5'],
+                        x['pm2_5_24h'],
+                        x['position_name'],
+                        x['station_code'],
+                        x['primary_pollutant'],
+                        x['quality'],
+                        x['so2'],
+                        x['so2_24h'],
+                        x['time_point'].replace('T', ' ').replace('Z', '')
+                    ), cities))
+                )
+                if not message:
+                    self.write('post {}'.format(cities))
+                else:
+                    self.write('err: {}'.format(message))
+        else:
+            self.write(aqi_for)
