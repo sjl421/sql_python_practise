@@ -2,6 +2,7 @@ import tornado.ioloop
 from handler.base import MainHandler
 from handler.city import CityHandler
 from handler.station import StationHandler
+from handler.aqi import AqiHandler
 from db.base import conn
 from db.city import create_table_city
 from db.station import create_table_station
@@ -12,6 +13,7 @@ def make_app():
         (r'/', MainHandler, dict(conn=conn)),
         (r'/city', CityHandler, dict(conn=conn)),
         (r'/station', StationHandler, dict(conn=conn)),
+        (r'/aqi', AqiHandler, dict(conn=conn)),
     ])
 
 
