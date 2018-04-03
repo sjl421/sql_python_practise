@@ -34,6 +34,14 @@ SELECT_FROM_STATION_WHERE_NAME = '''
 SELECT * FROM station WHERE station_name='{}';
 '''
 
+SELECT_FROM_STATION_WHERE_CODE = '''
+SELECT * FROM station WHERE station_code='{}';
+'''
+
+SELECT_FROM_STATION_WHERE_CITY = '''
+SELECT * FROM station WHERE city_id=(SELECT id FROM city WHERE name='{}');
+'''
+
 
 def create_table_station(conn):
     execute_create_or_drop(conn, CREATE_TABLE_STATION)
@@ -43,8 +51,13 @@ def drop_table_station(conn):
     execute_create_or_drop(conn, DROP_TABLE_STATION)
 
 
-def select_from_station(conn, station):
-    return execute_select_all(conn, SELECT_FROM_STATION_WHERE_NAME.format(station))
+def select_from_station(conn, station_name=None, station_code=None, city=None):
+    if station_name:
+        return execute_select_all(conn, SELECT_FROM_STATION_WHERE_NAME.format(station_name))
+    elif station_code:
+        return execute_select_all(conn, SELECT_FROM_STATION_WHERE_CODE.format(station_code))
+    elif city:
+        return execute_select_all(conn, SELECT_FROM_STATION_WHERE_CITY.format(city))
 
 
 def select_all_from_station(conn):

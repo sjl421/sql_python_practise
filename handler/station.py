@@ -8,8 +8,14 @@ class StationHandler(BaseHandler):
 
     def get(self, *args, **kwargs):
         name = self.get_argument('name', None)
+        code = self.get_argument('code', None)
+        city = self.get_argument('city', None)
         if name:
-            data = select_from_station(conn=self.conn, station=name)
+            data = select_from_station(conn=self.conn, station_name=name)
+        elif code:
+            data = select_from_station(conn=self.conn, station_code=code)
+        elif city:
+            data = select_from_station(conn=self.conn, city=city)
         else:
             data = select_all_from_station(conn=self.conn)
         self.write('get {}'.format(data))

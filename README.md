@@ -49,15 +49,45 @@
 
 ## REST API
 
-- city
-  - get
-  - post
-- station(**todo**)
-  - get
-  - post
-- city_aqi(**todo**)
-  - get
-  - post
-- station_aqi(**todo**)
-  - get
-  - post
+### city
+#### get
+获取所有城市数据
+```
+GET /city
+```
+获取对应 name 参数的城市数据
+```
+GET /city?name={city name}
+```
+#### post
+将城市录入数据库 city 表
+
+### station
+#### get
+获取所有监测站数据
+```
+GET /station
+```
+获取对应 station_name 参数的监测站数据
+```
+GET /station?name={station name}
+```
+获取对应 station_code 参数的监测站数据
+```
+GET /station?code={station code}
+```
+获取对应 city 参数的监测站数据
+```
+GET /station?city={city}
+```
+#### post
+将监测站录入数据库 station 表
+
+### city_aqi(**todo**)
+#### get
+
+#### post
+
+### station_aqi(**todo**)
+#### get
+#### post

@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd743200-9606-44f0-8dc2-21c7bdcee527" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sql_python_practise.iml" afterPath="$PROJECT_DIR$/.idea/sql_python_practise.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change beforePath="$PROJECT_DIR$/db/station.py" afterPath="$PROJECT_DIR$/db/station.py" />
       <change beforePath="$PROJECT_DIR$/handler/station.py" afterPath="$PROJECT_DIR$/handler/station.py" />
-      <change beforePath="$PROJECT_DIR$/web.py" afterPath="$PROJECT_DIR$/web.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/sql_python_practise$web.coverage" NAME="web Coverage Results" MODIFIED="1522725084748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sql_python_practise$web.coverage" NAME="web Coverage Results" MODIFIED="1522725634027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -62,16 +60,32 @@
       <file leaf-file-name="station.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/station.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+            <state relative-caret-position="-92">
+              <caret line="41" column="74" lean-forward="true" selection-start-line="41" selection-start-column="74" selection-end-line="41" selection-end-column="74" />
               <folding>
-                <marker date="1522725082450" expanded="true" signature="49:354" ph="CREATE TABLE... IF" />
-                <marker date="1522725082450" expanded="true" signature="386:404" ph="DROP TABLE s... " />
-                <marker date="1522725082450" expanded="true" signature="443:565" ph="INSERT INTO station... " />
-                <marker date="1522725082450" expanded="true" signature="529:562" ph="SELECT id fr... city" />
-                <marker date="1522725082450" expanded="true" signature="598:619" ph="SELECT * FRO... station" />
-                <marker date="1522725082450" expanded="true" signature="663:708" ph="SELECT * FRO... station" />
+                <marker date="1522725628354" expanded="true" signature="49:354" ph="CREATE TABLE... IF" />
+                <marker date="1522725628354" expanded="true" signature="386:404" ph="DROP TABLE s... " />
+                <marker date="1522725628354" expanded="true" signature="443:565" ph="INSERT INTO station... " />
+                <marker date="1522725628354" expanded="true" signature="529:562" ph="SELECT id fr... city" />
+                <marker date="1522725628354" expanded="true" signature="598:619" ph="SELECT * FRO... station" />
+                <marker date="1522725628354" expanded="true" signature="663:708" ph="SELECT * FRO... station" />
+                <marker date="1522725628354" expanded="true" signature="752:797" ph="SELECT * FRO... station" />
+                <marker date="1522725628354" expanded="true" signature="841:914" ph="SELECT * FRO... station" />
+                <marker date="1522725628354" expanded="true" signature="878:913" ph="SELECT id FR... city" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="214">
+                <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -88,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="station.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="station.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/handler/station.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            <state relative-caret-position="324">
+              <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -139,14 +153,14 @@
       <list>
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/handler/base.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/db/base.py" />
         <option value="$PROJECT_DIR$/handler/city.py" />
         <option value="$PROJECT_DIR$/db/city.py" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/web.py" />
-        <option value="$PROJECT_DIR$/db/station.py" />
         <option value="$PROJECT_DIR$/handler/station.py" />
+        <option value="$PROJECT_DIR$/db/station.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -282,9 +296,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3282532" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33003953" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20032051" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -341,12 +355,15 @@
         <state relative-caret-position="1035">
           <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
-            <marker date="1522725082450" expanded="true" signature="49:354" ph="CREATE TABLE... IF" />
-            <marker date="1522725082450" expanded="true" signature="386:404" ph="DROP TABLE s... " />
-            <marker date="1522725082450" expanded="true" signature="443:565" ph="INSERT INTO station... " />
-            <marker date="1522725082450" expanded="true" signature="529:562" ph="SELECT id fr... city" />
-            <marker date="1522725082450" expanded="true" signature="598:619" ph="SELECT * FRO... station" />
-            <marker date="1522725082450" expanded="true" signature="663:708" ph="SELECT * FRO... station" />
+            <marker date="1522725628354" expanded="true" signature="49:354" ph="CREATE TABLE... IF" />
+            <marker date="1522725628354" expanded="true" signature="386:404" ph="DROP TABLE s... " />
+            <marker date="1522725628354" expanded="true" signature="443:565" ph="INSERT INTO station... " />
+            <marker date="1522725628354" expanded="true" signature="529:562" ph="SELECT id fr... city" />
+            <marker date="1522725628354" expanded="true" signature="598:619" ph="SELECT * FRO... station" />
+            <marker date="1522725628354" expanded="true" signature="663:708" ph="SELECT * FRO... station" />
+            <marker date="1522725628354" expanded="true" signature="752:797" ph="SELECT * FRO... station" />
+            <marker date="1522725628354" expanded="true" signature="841:914" ph="SELECT * FRO... station" />
+            <marker date="1522725628354" expanded="true" signature="878:913" ph="SELECT id FR... city" />
           </folding>
         </state>
       </provider>
@@ -398,16 +415,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="155">
-            <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -479,28 +486,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/station.py">
+    <entry file="file://$PROJECT_DIR$/handler/station.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        <state relative-caret-position="324">
+          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding>
-            <marker date="1522725082450" expanded="true" signature="49:354" ph="CREATE TABLE... IF" />
-            <marker date="1522725082450" expanded="true" signature="386:404" ph="DROP TABLE s... " />
-            <marker date="1522725082450" expanded="true" signature="443:565" ph="INSERT INTO station... " />
-            <marker date="1522725082450" expanded="true" signature="529:562" ph="SELECT id fr... city" />
-            <marker date="1522725082450" expanded="true" signature="598:619" ph="SELECT * FRO... station" />
-            <marker date="1522725082450" expanded="true" signature="663:708" ph="SELECT * FRO... station" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handler/station.py">
+    <entry file="file://$PROJECT_DIR$/db/station.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        <state relative-caret-position="-92">
+          <caret line="41" column="74" lean-forward="true" selection-start-line="41" selection-start-column="74" selection-end-line="41" selection-end-column="74" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1522725628354" expanded="true" signature="49:354" ph="CREATE TABLE... IF" />
+            <marker date="1522725628354" expanded="true" signature="386:404" ph="DROP TABLE s... " />
+            <marker date="1522725628354" expanded="true" signature="443:565" ph="INSERT INTO station... " />
+            <marker date="1522725628354" expanded="true" signature="529:562" ph="SELECT id fr... city" />
+            <marker date="1522725628354" expanded="true" signature="598:619" ph="SELECT * FRO... station" />
+            <marker date="1522725628354" expanded="true" signature="663:708" ph="SELECT * FRO... station" />
+            <marker date="1522725628354" expanded="true" signature="752:797" ph="SELECT * FRO... station" />
+            <marker date="1522725628354" expanded="true" signature="841:914" ph="SELECT * FRO... station" />
+            <marker date="1522725628354" expanded="true" signature="878:913" ph="SELECT id FR... city" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="214">
+            <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
