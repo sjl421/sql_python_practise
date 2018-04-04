@@ -5,11 +5,11 @@ CREATE_TABLE_STATION = '''
 CREATE TABLE IF NOT EXISTS station (
   id INT PRIMARY KEY auto_increment,
   station_name VARCHAR(50) not NULL,
-  station_code VARCHAR(10) UNIQUE not NULL,
+  station_code VARCHAR(10) not NULL,
   city_id INT not NULL,
   KEY city_id (city_id),
   CONSTRAINT station_ibfk_1 FOREIGN KEY (city_id) REFERENCES city(id),
-  CONSTRAINT UNIQUE (station_name, station_code)
+  CONSTRAINT UNIQUE (city_id, station_code)
 ) DEFAULT CHARACTER SET utf8mb4;
 '''
 
