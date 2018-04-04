@@ -261,7 +261,7 @@ GET /aqi/city
     ]
 }
 ```
-获取对应 name、code、city 城市空气质量数据
+获取对应 name 城市空气质量数据
 ```
 GET /aqi/city?name={city}
 ```
