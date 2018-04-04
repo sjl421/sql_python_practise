@@ -121,6 +121,106 @@ INSERT INTO station_aqi (
 );
 '''
 
+SELECT_FROM_CITY_AQI = '''
+SELECT 
+  aqi,
+  (SELECT name from city WHERE id=city_id),
+  co,
+  co_24h,
+  no2,
+  no2_24h,
+  o3,
+  o3_24h,
+  o3_8h,
+  o3_8h_24h,
+  pm10,
+  pm10_24h,
+  pm2_5,
+  pm2_5_24h,
+  primary_pollutant,
+  quality,
+  level,
+  so2,
+  so2_24h,
+  (SELECT DATE_FORMAT(time_point, '%Y-%m-%d %H:%i:%S'))
+FROM city_aqi WHERE city_id=(SELECT id from city WHERE name='{}');
+'''
+
+SELECT_ALL_FROM_CITY_AQI = '''
+SELECT 
+  aqi,
+  (SELECT name from city WHERE id=city_id),
+  co,
+  co_24h,
+  no2,
+  no2_24h,
+  o3,
+  o3_24h,
+  o3_8h,
+  o3_8h_24h,
+  pm10,
+  pm10_24h,
+  pm2_5,
+  pm2_5_24h,
+  primary_pollutant,
+  quality,
+  level,
+  so2,
+  so2_24h,
+  (SELECT DATE_FORMAT(time_point, '%Y-%m-%d %H:%i:%S'))
+FROM city_aqi;
+'''
+
+SELECT_FROM_STATION_AQI_WHEN_CITY = '''
+SELECT 
+  aqi,
+  (SELECT name from city WHERE id=city_id),
+  co,
+  co_24h,
+  no2,
+  no2_24h,
+  o3,
+  o3_24h,
+  o3_8h,
+  o3_8h_24h,
+  pm10,
+  pm10_24h,
+  pm2_5,
+  pm2_5_24h,
+  (SELECT station_name from station WHERE id=position_id),
+  primary_pollutant,
+  quality,
+  so2,
+  so2_24h,
+  (SELECT DATE_FORMAT(time_point, '%Y-%m-%d %H:%i:%S'))
+FROM station_aqi WHERE city_id=(SELECT id FROM city WHERE name='{}');
+'''
+
+SELECT_ALL_FROM_STATION_AQI = '''
+SELECT 
+  aqi,
+  (SELECT name from city WHERE id=city_id),
+  co,
+  co_24h,
+  no2,
+  no2_24h,
+  o3,
+  o3_24h,
+  o3_8h,
+  o3_8h_24h,
+  pm10,
+  pm10_24h,
+  pm2_5,
+  pm2_5_24h,
+  (SELECT station_name from station WHERE id=position_id),
+  primary_pollutant,
+  quality,
+  so2,
+  so2_24h,
+  (SELECT DATE_FORMAT(time_point, '%Y-%m-%d %H:%i:%S'))
+FROM station_aqi;
+'''
+
 
 def create_table_city_aqi(conn):
     execute_create_or_drop(conn, CREATE_TABLE_CITY_AQI)
@@ -148,3 +248,22 @@ def drop_table_station_aqi(conn):
 
 def insert_many_into_station_aqi(conn, params):
     return executemany_insert(conn, INSERT_INTO_TABLE_STATION_AQI, params)
+
+
+def select_from_city_aqi(conn, city):
+    return execute_select_all(conn, SELECT_FROM_CITY_AQI.format(city))
+
+
+def select_all_from_city_aqi(conn):
+    return execute_select_all(conn, SELECT_ALL_FROM_CITY_AQI)
+
+
+def select_from_station_aqi(conn, city=None):
+    if city:
+        return execute_select_all(conn, SELECT_FROM_STATION_AQI_WHEN_CITY.format(city))
+    else:
+        return execute_select_all(conn, SELECT_FROM_CITY_AQI.format(city))
+
+
+def select_all_from_city_aqi(conn):
+    return execute_select_all(conn, SELECT_ALL_FROM_STATION_AQI)

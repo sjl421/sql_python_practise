@@ -18,7 +18,7 @@ class StationHandler(BaseHandler):
             data = select_from_station(conn=self.conn, city=city)
         else:
             data = select_all_from_station(conn=self.conn)
-        self.write({'status': 'success', 'data': data})
+        self.write({'status': 'success', 'count': len(data), 'data': data})
 
     def post(self, *args, **kwargs):
         with open(os.path.join(os.path.dirname(__file__), '../data/station_names.json')) as fh:

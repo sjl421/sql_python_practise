@@ -28,7 +28,7 @@ INSERT INTO station (
 '''
 
 SELECT_FROM_STATION = '''
-SELECT * FROM station;
+SELECT s.id, s.station_name, s.station_code, c.name FROM station s LEFT JOIN city c on s.city_id=c.id;
 '''
 
 SELECT_FROM_STATION_WHERE_NAME = '''

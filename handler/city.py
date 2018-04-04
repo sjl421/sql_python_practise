@@ -12,7 +12,7 @@ class CityHandler(BaseHandler):
             data = select_from_city(conn=self.conn, city=name)
         else:
             data = select_all_from_city(conn=self.conn)
-        self.write({'status': 'success', 'data': data})
+        self.write({'status': 'success', 'count': len(data), 'data': data})
 
     def post(self, *args, **kwargs):
         with open(os.path.join(os.path.dirname(__file__), '../data/querys.json')) as fh:
