@@ -18,7 +18,7 @@ class StationHandler(BaseHandler):
             data = select_from_station(conn=self.conn, city=city)
         else:
             data = select_all_from_station(conn=self.conn)
-        self.write('get {}'.format(data))
+        self.write({'status': 'success', 'data': data})
 
     def post(self, *args, **kwargs):
         with open(os.path.join(os.path.dirname(__file__), '../data/station_names.json')) as fh:
@@ -28,7 +28,7 @@ class StationHandler(BaseHandler):
                     conn=self.conn,
                     params=list(map(lambda x: (x['station_name'], x['station_code'], city['city']), city['stations']))
                 )
-            if not message:
-                self.write('post {}'.format(cities))
-            else:
-                self.write('err: {}'.format(message))
+                if message:
+                    self.finish({'status': 'error', 'message': message})
+                    break
+            self.write({'status': 'success', 'message': '插入{}条监测站数据'.format(len(cities))})

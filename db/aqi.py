@@ -117,7 +117,7 @@ INSERT INTO station_aqi (
 ) VALUES (
   %s, (SELECT id from city WHERE name=%s),
   %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
-  %s, (SELECT id from station WHERE station_code=%s AND city_id=(SELECT id from city WHERE name=%s)), %s, %s, %s, %s, %s
+  %s, (SELECT id from station WHERE station_name=%s and station_code=%s AND city_id=(SELECT id from city WHERE name=%s)), %s, %s, %s, %s, %s
 );
 '''
 

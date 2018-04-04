@@ -12,13 +12,13 @@ class CityHandler(BaseHandler):
             data = select_from_city(conn=self.conn, city=name)
         else:
             data = select_all_from_city(conn=self.conn)
-        self.write('get {}'.format(data))
+        self.write({'status': 'success', 'data': data})
 
     def post(self, *args, **kwargs):
         with open(os.path.join(os.path.dirname(__file__), '../data/querys.json')) as fh:
             cities = json.loads(fh.read())['cities']
             message = insert_many_into_city(conn=self.conn, params=list(map(lambda x: (x, ), cities)))
             if not message:
-                self.write('post {}'.format(cities))
+                self.write({'status': 'success', 'message': '插入{}条城市数据'.format(len(cities))})
             else:
-                self.write('err: {}'.format(message))
+                self.write({'status': 'error', 'message': message})

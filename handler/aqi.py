@@ -41,18 +41,12 @@ class AqiHandler(BaseHandler):
                         ), cities))
                 )
                 if not message:
-                    self.write('post {}'.format(cities))
+                    self.write({'status': 'success', 'message': '插入{}条城市空气质量数据'.format(len(cities))})
                 else:
-                    self.write('err: {}'.format(message))
+                    self.write({'status': 'error', 'message': message})
         elif aqi_for == 'station':
             with open(os.path.join(os.path.dirname(__file__), '../data/all_cities.json')) as fh:
                 cities = json.loads(fh.read())
-                for city in cities:
-                    print(city)
-                    cursor = self.conn.cursor()
-                    sql = "select id from station where station_code=%s and city_id=(select id from city where name='{}')".format(city['station_code'], city['area'])
-                    cursor.execute(sql)
-                    cursor.close()
                 message = insert_many_into_station_aqi(
                     conn=self.conn,
                     params=list(map(lambda x: (
@@ -70,6 +64,7 @@ class AqiHandler(BaseHandler):
                         x['pm10_24h'],
                         x['pm2_5'],
                         x['pm2_5_24h'],
+                        x['position_name'],
                         x['station_code'],
                         x['area'],
                         x['primary_pollutant'],
@@ -80,8 +75,8 @@ class AqiHandler(BaseHandler):
                     ), cities))
                 )
                 if not message:
-                    self.write('post {}'.format(cities))
+                    self.write({'status': 'success', 'message': '插入{}条监测站空气质量数据'.format(len(cities))})
                 else:
-                    self.write('err: {}'.format(message))
+                    self.write({'status': 'error', 'message': message})
         else:
-            self.write(aqi_for)
+            self.write({'status': 'error', 'message': '请确认您的 type 类型是否正确'})

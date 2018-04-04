@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS station (
   city_id INT not NULL,
   KEY city_id (city_id),
   CONSTRAINT station_ibfk_1 FOREIGN KEY (city_id) REFERENCES city(id),
-  CONSTRAINT UNIQUE (city_id, station_code)
+  CONSTRAINT UNIQUE (city_id, station_name, station_code)
 ) DEFAULT CHARACTER SET utf8mb4;
 '''
 
@@ -32,15 +32,15 @@ SELECT * FROM station;
 '''
 
 SELECT_FROM_STATION_WHERE_NAME = '''
-SELECT * FROM station WHERE station_name='{}';
+SELECT s.id, s.station_name, s.station_code, c.name FROM station s LEFT JOIN city c on s.city_id=c.id WHERE station_name='{}';
 '''
 
 SELECT_FROM_STATION_WHERE_CODE = '''
-SELECT * FROM station WHERE station_code='{}';
+SELECT s.id, s.station_name, s.station_code, c.name FROM station s LEFT JOIN city c on s.city_id=c.id WHERE station_code='{}';
 '''
 
 SELECT_FROM_STATION_WHERE_CITY = '''
-SELECT * FROM station WHERE city_id=(SELECT id FROM city WHERE name='{}');
+SELECT id, station_name, station_code FROM station WHERE city_id=(SELECT id FROM city WHERE name='{}');
 '''
 
 
