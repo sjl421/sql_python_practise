@@ -11,13 +11,13 @@ class StationHandler(BaseHandler):
         code = self.get_argument('code', None)
         city = self.get_argument('city', None)
         if name:
-            data = select_from_station(conn=self.conn, station_name=name)
+            data = select_from_station(station_name=name)
         elif code:
-            data = select_from_station(conn=self.conn, station_code=code)
+            data = select_from_station(station_code=code)
         elif city:
-            data = select_from_station(conn=self.conn, city=city)
+            data = select_from_station(city=city)
         else:
-            data = select_all_from_station(conn=self.conn)
+            data = select_all_from_station()
         self.write({'status': 'success', 'count': len(data), 'data': data})
 
     def post(self, *args, **kwargs):
@@ -25,7 +25,6 @@ class StationHandler(BaseHandler):
             cities = json.loads(fh.read())
             for city in cities:
                 message = insert_many_into_station(
-                    conn=self.conn,
                     params=list(map(lambda x: (x['station_name'], x['station_code'], city['city']), city['stations']))
                 )
                 if message:

@@ -1,4 +1,4 @@
-from .base import *
+from .base import DB
 
 
 CREATE_TABLE_CITY_AQI = '''
@@ -222,48 +222,59 @@ FROM station_aqi;
 '''
 
 
-def create_table_city_aqi(conn):
-    execute_create_or_drop(conn, CREATE_TABLE_CITY_AQI)
+def create_table_city_aqi():
+    db = DB()
+    db.execute_create_or_drop(CREATE_TABLE_CITY_AQI)
 
 
-def drop_table_city_aqi(conn):
-    execute_create_or_drop(conn, DROP_TABLE_CITY_AQI)
+def drop_table_city_aqi():
+    db = DB()
+    db.execute_create_or_drop(DROP_TABLE_CITY_AQI)
 
 
-def insert_into_city_aqi(conn, param):
-    execute_insert(conn, INSERT_INTO_TABLE_CITY_AQI)
+def insert_into_city_aqi(param):
+    db = DB()
+    db.execute_insert(INSERT_INTO_TABLE_CITY_AQI)
 
 
-def insert_many_into_city_aqi(conn, params):
-    return executemany_insert(conn, INSERT_INTO_TABLE_CITY_AQI, params)
+def insert_many_into_city_aqi(params):
+    db = DB()
+    return db.executemany_insert(INSERT_INTO_TABLE_CITY_AQI, params)
 
 
-def create_table_station_aqi(conn):
-    execute_create_or_drop(conn, CREATE_TABLE_STATION_AQI)
+def create_table_station_aqi():
+    db = DB()
+    db.execute_create_or_drop(CREATE_TABLE_STATION_AQI)
 
 
-def drop_table_station_aqi(conn):
-    execute_create_or_drop(conn, DROP_TABLE_STATION_AQI)
+def drop_table_station_aqi():
+    db = DB()
+    db.execute_create_or_drop(DROP_TABLE_STATION_AQI)
 
 
-def insert_many_into_station_aqi(conn, params):
-    return executemany_insert(conn, INSERT_INTO_TABLE_STATION_AQI, params)
+def insert_many_into_station_aqi(params):
+    db = DB()
+    return db.executemany_insert(INSERT_INTO_TABLE_STATION_AQI, params)
 
 
-def select_from_city_aqi(conn, city):
-    return execute_select_all(conn, SELECT_FROM_CITY_AQI.format(city))
+def select_from_city_aqi(city):
+    db = DB()
+    return db.execute_select_all(SELECT_FROM_CITY_AQI.format(city))
 
 
-def select_all_from_city_aqi(conn):
-    return execute_select_all(conn, SELECT_ALL_FROM_CITY_AQI)
+def select_all_from_city_aqi():
+    db = DB()
+    return db.execute_select_all(SELECT_ALL_FROM_CITY_AQI)
 
 
-def select_from_station_aqi(conn, city=None):
+def select_from_station_aqi(city=None):
+    db = DB()
     if city:
-        return execute_select_all(conn, SELECT_FROM_STATION_AQI_WHEN_CITY.format(city))
+        return db.execute_select_all(SELECT_FROM_STATION_AQI_WHEN_CITY.format(city))
     else:
-        return execute_select_all(conn, SELECT_FROM_CITY_AQI.format(city))
+        return db.execute_select_all(SELECT_FROM_CITY_AQI.format(city))
 
 
-def select_all_from_city_aqi(conn):
-    return execute_select_all(conn, SELECT_ALL_FROM_STATION_AQI)
+def select_all_from_city_aqi():
+    db = DB()
+    return db.execute_select_all(SELECT_ALL_FROM_STATION_AQI)

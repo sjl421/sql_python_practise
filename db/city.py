@@ -1,4 +1,4 @@
-from .base import *
+from .base import DB
 
 
 CREATE_TABLE_CITY = '''
@@ -29,25 +29,31 @@ SELECT * FROM city WHERE name='{}';
 '''
 
 
-def create_table_city(conn):
-    execute_create_or_drop(conn, CREATE_TABLE_CITY)
+def create_table_city():
+    db = DB()
+    db.execute_create_or_drop(CREATE_TABLE_CITY)
 
 
-def drop_table_city(conn):
-    execute_create_or_drop(conn, DROP_TABLE_CITY)
+def drop_table_city():
+    db = DB()
+    db.execute_create_or_drop(DROP_TABLE_CITY)
 
 
-def select_from_city(conn, city):
-    return execute_select_all(conn, SELECT_FROM_CITY_WHERE_NAME.format(city))
+def select_from_city(city):
+    db = DB()
+    return db.execute_select_all(SELECT_FROM_CITY_WHERE_NAME.format(city))
 
 
-def select_all_from_city(conn):
-    return execute_select_all(conn, SELECT_FROM_CITY)
+def select_all_from_city():
+    db = DB()
+    return db.execute_select_all(SELECT_FROM_CITY)
 
 
-def insert_into_city(conn, param):
-    execute_insert(conn, INSERT_INTO_TABLE_CITY)
+def insert_into_city(param):
+    db = DB()
+    db.execute_insert(INSERT_INTO_TABLE_CITY)
 
 
-def insert_many_into_city(conn, params):
-    return executemany_insert(conn, INSERT_INTO_TABLE_CITY, params)
+def insert_many_into_city(params):
+    db = DB()
+    return db.executemany_insert(INSERT_INTO_TABLE_CITY, params)

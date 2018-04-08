@@ -61,16 +61,15 @@ class CityAqiHandler(BaseHandler):
     def get(self, *args, **kwargs):
         name = self.get_argument('name', None)
         if name:
-            data = select_from_city_aqi(conn=self.conn, city=name)
+            data = select_from_city_aqi(city=name)
         else:
-            data = select_all_from_city_aqi(conn=self.conn)
+            data = select_all_from_city_aqi()
         self.write({'status': 'success', 'count': len(data), 'data': format_city_aqi(data)})
 
     def post(self, *args, **kwargs):
         with open(os.path.join(os.path.dirname(__file__), '../data/aqi_ranking.json')) as fh:
             cities = json.loads(fh.read())
             message = insert_many_into_city_aqi(
-                conn=self.conn,
                 params=list(map(lambda x: (
                         x['aqi'],
                         x['area'],
@@ -105,16 +104,15 @@ class StationAqiHandler(BaseHandler):
     def get(self, *args, **kwargs):
         city = self.get_argument('city', None)
         if city:
-            data = select_from_station_aqi(conn=self.conn, city=city)
+            data = select_from_station_aqi(city=city)
         else:
-            data = select_all_from_city_aqi(conn=self.conn)
+            data = select_all_from_city_aqi()
         self.write({'status': 'success', 'count': len(data), 'data': format_station_aqi(data)})
 
     def post(self, *args, **kwargs):
         with open(os.path.join(os.path.dirname(__file__), '../data/all_cities.json')) as fh:
             cities = json.loads(fh.read())
             message = insert_many_into_station_aqi(
-                conn=self.conn,
                 params=list(map(lambda x: (
                     x['aqi'],
                     x['area'],

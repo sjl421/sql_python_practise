@@ -1,4 +1,4 @@
-from .base import *
+from .base import DB
 
 
 CREATE_TABLE_STATION = '''
@@ -44,30 +44,36 @@ SELECT id, station_name, station_code FROM station WHERE city_id=(SELECT id FROM
 '''
 
 
-def create_table_station(conn):
-    execute_create_or_drop(conn, CREATE_TABLE_STATION)
+def create_table_station():
+    db = DB()
+    db.execute_create_or_drop(CREATE_TABLE_STATION)
 
 
-def drop_table_station(conn):
-    execute_create_or_drop(conn, DROP_TABLE_STATION)
+def drop_table_station():
+    db = DB()
+    db.execute_create_or_drop(DROP_TABLE_STATION)
 
 
-def select_from_station(conn, station_name=None, station_code=None, city=None):
+def select_from_station(station_name=None, station_code=None, city=None):
+    db = DB()
     if station_name:
-        return execute_select_all(conn, SELECT_FROM_STATION_WHERE_NAME.format(station_name))
+        return db.execute_select_all(SELECT_FROM_STATION_WHERE_NAME.format(station_name))
     elif station_code:
-        return execute_select_all(conn, SELECT_FROM_STATION_WHERE_CODE.format(station_code))
+        return db.execute_select_all(SELECT_FROM_STATION_WHERE_CODE.format(station_code))
     elif city:
-        return execute_select_all(conn, SELECT_FROM_STATION_WHERE_CITY.format(city))
+        return db.execute_select_all(SELECT_FROM_STATION_WHERE_CITY.format(city))
 
 
-def select_all_from_station(conn):
-    return execute_select_all(conn, SELECT_FROM_STATION)
+def select_all_from_station():
+    db = DB()
+    return db.execute_select_all(SELECT_FROM_STATION)
 
 
-def insert_into_station(conn, param):
-    execute_insert(conn, INSERT_INTO_TABLE_STATION, param)
+def insert_into_station(param):
+    db = DB()
+    db.execute_insert(INSERT_INTO_TABLE_STATION, param)
 
 
-def insert_many_into_station(conn, params):
-    return executemany_insert(conn, INSERT_INTO_TABLE_STATION, params)
+def insert_many_into_station(params):
+    db = DB()
+    return db.executemany_insert(INSERT_INTO_TABLE_STATION, params)
